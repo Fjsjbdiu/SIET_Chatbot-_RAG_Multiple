@@ -3,7 +3,7 @@ from rag_engine import load_base, ask_rag
 st.title("SIET - Chatbot ")
 st.caption("Ask Anything about College Information, Courses,Placement, FAQs, Rules and regulation")
 st.caption("RAG Pipeline with Multiple files")
-
+mykey = st.secrets["GROQ_API_KEY"]
 @st.cache_resource
 def initiate_rag():
   return load_base("college_docs")
